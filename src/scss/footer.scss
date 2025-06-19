@@ -1,0 +1,35 @@
+.bottom-page {
+  display: flex;
+  flex-direction: column;
+}
+//====================================================================================================
+.footer {
+  background-color: #ffffff;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: toRem(24);
+    @include adaptiveValue('padding-top', 40, 20);
+    @include adaptiveValue('padding-bottom', 30, 20);
+  }
+  &__social {
+    .social__link {
+      color: $grayColor;
+      transition: color 0.3s;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $purpleColor;
+        }
+      }
+    }
+  }
+  &__copy {
+    color: $grayColor;
+    font-size: toRem(14);
+    line-height: 1.21; /* 17/14 */
+  }
+}
+
+//====================================================================================================
